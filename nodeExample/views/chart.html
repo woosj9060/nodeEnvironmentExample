@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script>
+    $(function() {
+      $("button").on("click", function() {
+        var str = $(this).attr("value");
+        $(str).siblings("div").slice(0, 2).fadeOut(200);
+        $(str).delay(200).fadeIn(200);
+      });
+    });
+  </script>
+  <script type="text/javascript" src="pie1.js"></script>
+  <script type="text/javascript" src="pie2.js"></script>
+  <script type="text/javascript" src="cat1.js"></script>
+  <script type="text/javascript" src="mv.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div id="PIE1" class="content" style="display:block;"></div>
+    <div id="PIE2" class="content" style="display:none;"></div>
+    <div id="CAT1" class="content" style="display:none;"></div>
+
+    <div class="content">
+      <button class="btn" onmouseover="" id="pie1_button" value="#PIE1">PIE1</button>
+      <button class="btn" id="pie2_button" value="#PIE2">PIE2</button>
+      <button class="btn" id="cat1_button" value="#CAT1">CAT1</button>
+    </div>
+  </div>
+  <button class="btn shome mv" value="">Home</button>
+  <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
